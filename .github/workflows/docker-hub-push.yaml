@@ -1,0 +1,15 @@
+name: Docker Hub Push
+
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          sh scripts/build_push.sh
